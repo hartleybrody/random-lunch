@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+
+{% block page_title %}Random Lunch{% endblock %}
+{% block page_subtitle %}Meet a New HubSpotter each week!{% endblock %}
+
+{% block content %}
+    
+    <div class="row">
+        <div id="greeting" class="span8 offset4">
+            <img src="{{gravatar}}" id="greeting-img"/>
+            <div id="greeting-msg">
+                {{user.nickname}}
+            </div>
+        </div>
+    </div><!-- .row -->
+
+    <div class="row">
+        <div class="span6 offset5">
+            <form id="signup" method="post">
+                <select class="chzn-select" data-placeholder="Select your department" id="department" name="department">
+                    <option value=""></option> 
+                    {% for dept in departments %}
+                    <option value="{{dept.slug}}">{{dept.name}}</option> 
+                    {% endfor %}
+                </select>
+                <input type="hidden" class="hs-button primary" value="{{user.nickname}}" name="email" />
+                <input type="submit" class="hs-button primary" value="Sign Up" />
+            </form>
+        </div>
+    </div><!-- .row -->
+
+    <div class="row">
+        <div id="info" class="span16">
+             Meet over {{employee_count}} other HubSpotters. <a href="https://wiki.hubspotcentral.com/display/marketing/Smit+Patel%27s+Lunch+Hustle?focusedCommentId=39096518#comment-39096518" target="_blank">Inspired by.</a>
+        </div>
+    </div><!-- .row -->
+{% endblock %}

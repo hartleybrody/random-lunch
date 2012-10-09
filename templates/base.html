@@ -1,0 +1,38 @@
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Meet HubSpotters</title>
+        <!-- HubSpot Style Guide, snapshotted Oct 3, 2012 -->
+        <script src="//static2cdn.hubspot.com/style_guide/static-2.12/js/style_guide_plus_layout_head.js" type="text/javascript"></script>
+        <link href="//static2cdn.hubspot.com/style_guide/static-2.12/sass/style_guide_plus_layout.css" media="screen" rel="stylesheet" type="text/css" />
+		<link href="//static2cdn.hubspot.com/style_guide_doc/static-1.71/sass/style_guide_doc.css" media="screen" rel="stylesheet" type="text/css" />
+		<link href="//static2cdn.hubspot.com/pictos/static-1.26/sass/font-base64.css" media="screen" rel="stylesheet" type="text/css" />
+        <link href="//static2cdn.hubspot.com/pictos/static-1.26/sass/pictos-index.css" media="screen" rel="stylesheet" type="text/css" />
+		<link href="/static/styles.css" media="screen" rel="stylesheet" type="text/css" />
+
+    </head>
+    <body>
+        <div class="container">
+            <section class="row">
+                <div class="span16 offset2">
+                    <header>
+                        <h1>
+                            {% block page_title %}{% endblock %}
+                            <small>
+                                {% block page_subtitle %}{% endblock %}
+                            </small>
+                        </h1>
+                    </header>
+
+                    {% block content %}{% endblock %}
+
+                </div>
+            </section><!--.row-->
+        </div><!--.container-->
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/jquery-ui.min.js"></script> 
+    <script src="//static2cdn.hubspot.com/style_guide/static-2.12/js/style_guide_plus_layout.js" type="text/javascript"></script>
+    <script src="//static2cdn.hubspot.com/style_guide_doc/static-1.71/js/style_guide_doc.js" type="text/javascript"></script>
+    </body>
+</html>

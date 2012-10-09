@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block page_title %}Random Lunch{% endblock %}
+{% block page_subtitle %}Meet a New HubSpotter each week!{% endblock %}
+
+{% block content %}
+    
+    <div class="row">
+        {% for employee in lunch.employees %}
+        <div id="greeting" class="span4 offset2">
+            <img src="{{employee.gravatar}}" id="greeting-img"/>
+            <div id="greeting-msg">
+                {{employee.nickname}}
+            </div>
+        </div>
+        {% endfor %}
+    </div><!-- .row -->
+
+{% endblock %}
