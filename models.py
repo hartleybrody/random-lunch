@@ -15,6 +15,7 @@ DEPARTMENTS = [
 
 ("product", "sales", "marketing", "support", "services", "executive", "finance", "IT", "people ops")
 
+
 class Employee(db.Model):
     """a hubspot employee who wants to meet people!"""
     user = db.UserProperty()
@@ -28,17 +29,18 @@ class Employee(db.Model):
         gravatar_url += hashlib.md5(self.reviewer.nickname().lower()).hexdigest()
         gravatar_url += "?"
         gravatar_url += urllib.urlencode({
-            's':"300",
-            'd':"mm", 
+            's': "300",
+            'd': "mm",
         })
         return gravatar_url
 
     def __repr__(self):
         return "E in %s" % self.department
 
+
 class Lunch(db.Model):
     """a meeting of two employees"""
-    employees = db.ListProperty(db.Key) # many-to-many relationship
+    employees = db.ListProperty(db.Key)  # many-to-many relationship
     assigned = db.DateTimeProperty(auto_now_add=True)
 
     def __repr__(self):
